@@ -7,13 +7,7 @@ const Child = ({ todos, onTodoComplete }) => {
 			<ul>
 				{todos.map((todo) => (
 					<li key={todo.id}>
-						<span
-							style={{
-								textDecoration: todo.completed ? "line-through" : "none",
-							}}
-						>
-							{todo.text}
-						</span>
+						<span>{todo.text}</span>
 						{!todo.completed && (
 							<button onClick={() => onTodoComplete(todo.id)}>Complete</button>
 						)}
